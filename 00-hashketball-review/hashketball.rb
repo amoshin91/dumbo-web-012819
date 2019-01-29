@@ -1,3 +1,4 @@
+# Make sure to use this gem in the project
 require 'pry'
 
 def game_hash
@@ -126,6 +127,54 @@ def game_hash
     }
   }
 end
+
+
+def num_point_scored(player_name)
+  # Given a name, we want to return the
+  # points that they scored
+
+  # game_hash
+  # 1. Iterate through game_hash
+  # 2. COMPARING player_name to the values through each iteration
+  # 3. Once it matches, return the points
+
+
+  # Making a big ol' array of players
+  find_player(player_name)[:points]
+end
+
+
+def shoe_size(player_name)
+
+  # 1. Gather all the players together in array
+  # 2. Iterate over them till you find the person whose name matches
+  # 3. Return their shoe size
+
+
+  find_player(player_name)[:shoe]
+end
+
+def players_array
+  game_hash[:home][:players].concat(game_hash[:away][:players])
+end
+
+def find_player(player_name)
+  # Find the player whose name matches but return the entire hash
+  players_array.find do |player_hash|
+    player_hash[:name] == player_name
+  end
+
+  # .find => Finds the first element that is true
+  # .select => Finds a list of elements that are true
+  # .map => "Returns an array based off of whatever you want"
+  # players_array.each do |player_hash|
+  #   if player_hash[:name] == player_name
+  #     return player_hash
+  #   end
+  # end
+end
+
+puts num_point_scored("Ben Gordon")
 
 
 
