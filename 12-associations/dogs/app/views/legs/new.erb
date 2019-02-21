@@ -1,0 +1,26 @@
+<form method="POST" action="/legs">
+  <ul>
+    <li>
+      <label for="color">Color</label>
+      <input id="color" name="leg[color]" />
+    </li>
+    <li>
+      <label for="dog-leg-length">Leg length</label>
+      <input id="dog-leg-length" name="leg[length]" />
+    </li>
+    <li>
+      <label for="dog_id">Dog ID</label>
+      <!-- <input id="dog_id" name="leg[dog_id]" /> -->
+      <select id="dog_id" name="leg[dog_id]">
+        <% @all_dogs.each do |dog| %>
+          <option value="<%= dog.id %>">
+            <%= dog.name %>
+          </option>
+        <% end %>
+      </select>
+    </li>
+  </ul>
+
+  <input type="submit" />
+
+</form>
