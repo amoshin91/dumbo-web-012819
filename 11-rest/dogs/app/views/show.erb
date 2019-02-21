@@ -1,0 +1,9 @@
+
+
+<h1>HI I AM <%= @dog.name %></h1>
+<p>My tail is <%= @dog.tail_length %> feet long</p>
+
+<form action="/dogs/<%= @dog.id %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE" />
+  <input type="submit" value="Send <%= @dog.name %> to live on a farm." />
+</form>
