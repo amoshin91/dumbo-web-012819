@@ -1,15 +1,7 @@
 
 <form action="/dogs/<%= @dog.id %>" method="POST">
   <input type="hidden" name="_method" value="PATCH">
-  <ul>
-    <li>
-      <label for="dog-name">Name</label>
-      <input id="dog-name" type="text" name="name" value="<%= @dog.name %>" />
-    </li>
-    <li>
-      <label for="dog-tail-length">Tail Length</label>
-      <input id="dog-tail-length" type="text" name="tail_length" value="<%= @dog.tail_length %>" />
-    </li>
-  </ul>
-  <input type="submit" />
+  <%= erb :form %>
 </form>
+
+

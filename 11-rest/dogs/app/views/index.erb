@@ -1,7 +1,7 @@
 HERE ARE DOGS
 
 <ul>
-  <% @dogs.each do |dog| %>
+  <% dogs.each do |dog| %>
   <li>
     <a href="/dogs/<%= dog.id %>">
       <%= dog.name %>
@@ -9,6 +9,8 @@ HERE ARE DOGS
   </li>
   <% end %>
 </ul>
+
+<a href="/dogs/new">NEW DOG PLEASE</a>
 
 
 
