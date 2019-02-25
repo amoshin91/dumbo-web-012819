@@ -1,0 +1,14 @@
+CATS INDEX
+
+
+<% @cats.each do |potato| %>
+<!--   <a href="/cats/<%# cat.id %>">
+    <%# cat.name %>    
+  </a> -->
+  <%# link_to cat.name + " (cat)", cat %>
+  <%# link_to cat.name + " (cat)", "/cats/#{ cat.id }" %>
+  <%# link_to cat.name + " (cat)", kitty_path(cat.id) %>
+  <%# link_to cat.name, cat_path(cat) %>
+  <%= link_to potato.name, potato %>
+
+<% end %>
