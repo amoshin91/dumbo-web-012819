@@ -1,0 +1,39 @@
+<h1>Edit <%= @dog.name %></h1>
+
+<%= form_for @dog do |f| %>
+  
+<ul>  
+  <li>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </li>
+  <li>
+    <%= f.label :tail_length %>
+    <%= f.number_field :tail_length %>
+  </li>
+  <li>
+    <%= f.label :color_hexadecimal %>
+    <%= f.text_field :color_hexadecimal %>
+  </li>
+</ul>
+
+<%= f.submit %>
+
+<% end %>
+
+<!-- <form method="POST" action="/dogs/<%= @dog.id %>">
+  <input type="hidden" name="_method" value="PATCH" />
+
+</form> -->
+
+
+<%# form_tag "/dogs/#{ @dog.id }", method: "DELETE" do %>
+<%# form_tag dog_path(@dog), method: "PATCH" do %>
+
+<%# end %>
+
+<%# form_for Dog.new do %>
+
+<%# end %>
+
+
