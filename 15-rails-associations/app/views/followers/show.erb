@@ -1,0 +1,10 @@
+<h1><%= @follower.name %></h1>
+<img src="<%= @follower.image_url %>" />
+<h2>Cults</h2>
+<ul>
+  <% @follower.cults.each do |cult| %>
+  <li>
+    <%= link_to cult.name, cult %>
+  </li>
+  <% end %>
+</ul>

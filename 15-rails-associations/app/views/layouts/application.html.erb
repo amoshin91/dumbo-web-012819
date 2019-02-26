@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CultTracker</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <ul>
+        <li>
+          <%= link_to "Cults index", cults_path %>
+        </li>
+        <li>
+          <%= link_to "Followers index", followers_path %>
+        </li>
+        <li>
+          <%= link_to "Make a Blood Oath", new_blood_oath_path %>
+        </li>
+      </ul>
+    </header>
+    <%= yield %>
+  </body>
+</html>

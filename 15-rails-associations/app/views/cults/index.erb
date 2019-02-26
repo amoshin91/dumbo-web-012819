@@ -1,0 +1,8 @@
+<h1>Index of cults</h1>
+<ul>
+  <% @cults.each do |cult| %>
+    <li>
+      <%= link_to cult.name, cult %>
+    </li>
+  <% end %>
+</ul>

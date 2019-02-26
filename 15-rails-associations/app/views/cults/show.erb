@@ -1,0 +1,10 @@
+<h1><%= @cult.name %></h1>
+<p>Our holy text is <%= @cult.holy_text %>.<p>
+<h2>Followers</h2>
+<ul>
+  <% @cult.followers.each do |follower| %>
+  <li>
+    <%= link_to follower.name, follower %>
+  </li>
+  <% end %>
+</ul>w

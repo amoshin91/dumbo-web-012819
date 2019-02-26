@@ -1,0 +1,8 @@
+<h1>Index of followers</h1>
+<ul>
+  <% @followers.each do |follower| %>
+    <li>
+      <%= link_to follower.name, follower %>
+    </li>
+  <% end %>
+</ul>
