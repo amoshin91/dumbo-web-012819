@@ -1,7 +1,7 @@
 class CultsController < ApplicationController
 
   def index
-    @cults = Cult.all
+    @cults = Cult.includes(:followers).all
   end
 
   def show

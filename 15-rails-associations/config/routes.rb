@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get "/", to: "welcome#index"
   resources :cults, only: [:index, :show]
   resources :followers, only: [:index, :show]
+  resources :blood_oaths, only: [:new, :create]
 end

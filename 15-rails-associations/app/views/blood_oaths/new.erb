@@ -1,0 +1,18 @@
+<h1>New Blood Oath</h1>
+<%= form_for @blood_oath do |f| %>
+
+  <ul>
+    <li>
+      <%= f.label :follower_id %>
+      <%# f.text_field :follower_id %>
+      <%= f.collection_select :follower_id, @all_followers, :id, :name %>
+    </li>
+    <li>
+      <%= f.label :cult_id %>
+      <%# f.text_field :cult_id %>
+      <%= f.collection_select :cult_id, @all_cults, :id, :name %>
+    </li>
+  </ul>
+  <%= f.submit %>
+
+<% end %>

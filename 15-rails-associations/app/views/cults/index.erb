@@ -2,7 +2,8 @@
 <ul>
   <% @cults.each do |cult| %>
     <li>
-      <%= link_to cult.name, cult %>
+      <%= link_to cult.name, cult %> 
+      <%= cult.followers.length %>
     </li>
   <% end %>
 </ul>
