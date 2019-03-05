@@ -1,0 +1,23 @@
+Plaintext  |  Hashed password
+--------------------------------------------------
+Password   | Ground Beef
+1234       | Ground Kangaroo
+Hi mom     | Ground Toucan
+
+
+
+
+
+
+
+
+
+a
+b
+c
+d
+1
+A
+aa
+aA
+Aa

@@ -16,4 +16,8 @@ class User < ApplicationRecord
   #   BCrypt::Password.new(self.password_digest) == password
   # end
 
+  def remaining_votes
+    5 - self.votes.length
+  end
+
 end

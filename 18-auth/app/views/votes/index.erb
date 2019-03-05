@@ -1,0 +1,12 @@
+<% @all_votes.each do |vote| %>
+  <li>
+  <%= vote.user.username %>
+  <%= vote.color.hex %>
+  <% if @logged_in_user.id == vote.user_id %>
+    <%= form_for vote, method: :delete do |t| %>
+      <%= t.submit "Delete" %>
+    <% end %>
+  <% end %>
+  </li>
+<% end %>
+
