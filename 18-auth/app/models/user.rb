@@ -4,7 +4,16 @@ class User < ApplicationRecord
 
   validates :username, { presence: true, uniqueness: true }
 
-  def votes_remaining
+  has_secure_password
 
-  end 
+  # def password=(plaintext)
+  #   # cow into ground beef
+  #   self.password_digest = BCrypt::Password.create(plaintext)
+  # end
+
+  # def authenticate(password)
+  #   # ground beef with special powers
+  #   BCrypt::Password.new(self.password_digest) == password
+  # end
+
 end

@@ -1,24 +1,19 @@
 # Part I
 
-# Key questions
-* What is the difference between Authorization and Authentication?
+* AUTHENTICation
+  - Who someone is
+* AUTHORization
+  - What you can do
+
+# Key questions for authentication
+✅ What is the difference between Authorization and Authentication?
 * What is hashing and how does it make password storage more secure?
 * What are rainbow tables and how can they defeat a password hashing strategy?
 * What is salting? What is a salt? How can it defeat a rainbow tables attack?
 
 ## Let's implement
 * Sign up
-  * Routes
-  * Migration
-  * Controller
-  * View
-  * Validations 
-
 * Log in
-  * Routes 
-  * Controller 
-  * View
-  * Validations
 
 # Part II
 
