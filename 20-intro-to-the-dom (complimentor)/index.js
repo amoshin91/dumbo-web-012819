@@ -125,3 +125,24 @@ const compliments = [
   "You’re really something special.",
   "You’re a gift to those around you."
 ];
+
+console.log('I loaded!!!!!');
+// we are finding our <em> tag & removing it
+document.querySelector('em').remove();
+
+const ulTag = document.querySelector('ul');
+// we need to iterate over our compliments
+for (let i = 0; i < compliments.length; i++) {
+  let compliment = compliments[i];
+  ulTag.innerHTML +=
+  `<li>
+      <img width="200" src="https://placekitten.com/500/250" />
+      <h3>"${compliment}"</h3>
+      <div>
+        <cite>Hugged 0 times</cite>
+        <button>🤗 it</button>
+      </div>
+    </li>`
+
+}
+// for each compliment create a new "post" - one of these:
