@@ -1,4 +1,4 @@
-# Intro To Javascript Ⓙⓢ
+# Intro To Front-End Web Development
 
 ### What to expect for Mod 3
 * Learning a second language
