@@ -4,6 +4,7 @@
 * Learning a second language
 * Gaining another superpower
 * Putting everything together
+* Three essential pillars of front-end web programming
 * The overall Mod layout
 	* Week 1 - Becoming a front-end developer
 	* Week 2 - Becoming a better front-end developer
