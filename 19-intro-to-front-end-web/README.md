@@ -68,3 +68,6 @@
 	* https://experiments.withgoogle.com/collection/chrome
 * AR & VR
 	* https://stemkoski.github.io/AR-Examples/
+
+* For Fun
+	* https://theuselessweb.com/
