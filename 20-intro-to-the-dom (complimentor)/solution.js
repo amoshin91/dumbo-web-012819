@@ -125,3 +125,54 @@ const compliments = [
   "You’re really something special.",
   "You’re a gift to those around you."
 ];
+
+/** ------------ This is using document.createElement() ------------ **/
+// for (let i= 0; i < compliments.length; i++) {
+//   // our parent container
+//   const liTag = document.createElement('li');
+//   // the h3 with our compliment
+//   const h3Tag = document.createElement('h3');
+//   h3Tag.innerText = compliments[i];
+//   // our div that should have the hug count & the button
+//   const divTag = document.createElement('div');
+//   // our hug button
+//   const buttonTag = document.createElement('button');
+//   buttonTag.innerText = '🤗 it';
+//   // our hug count container
+//   const citeTag = document.createElement('cite');
+//   citeTag.innerText = 'Hugged 0 Times'
+//   // our cat image
+//   const imageTag = document.createElement('img');
+//   imageTag.width = 200;
+//   imageTag.src = 'https://placekitten.com/510/215';
+//
+//   // add our hug stuff to our div container
+//   divTag.append(citeTag, buttonTag)
+//
+//   // put our elements together in our li
+//   liTag.append(imageTag, h3Tag, divTag)
+//
+//   // find our list of compliments
+//   const listContainer = document.querySelector('ul');
+//
+//   // add our new compliment to our list
+//   listContainer.append(liTag)
+// }
+
+
+/** ------------ This is using .innerHTML ------------ **/
+// find our list of compliments
+const listContainer = document.querySelector('ul');
+
+for (let i= 0; i < compliments.length; i++) {
+  // concatenate new li strings to the already existing html
+  listContainer.innerHTML +=
+  `<li>
+    <img width="200" src="https://placekitten.com/505/255" />
+    <h3>"${compliments[i]}"</h3>
+    <div>
+      <cite>Hugged 0 times</cite>
+      <button>🤗 it</button>
+    </div>
+  </li>`
+}
