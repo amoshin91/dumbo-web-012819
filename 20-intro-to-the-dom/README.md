@@ -1,4 +1,4 @@
-# Manipulating the DOM
+# Intro to the DOM
 
 ## Learning Goals
 * Identify the Document Object Model (DOM)
