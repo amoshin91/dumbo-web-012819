@@ -23,7 +23,7 @@ As a user I now have...
 * ~~the ability to add my own compliments~~
 * ~~the ability to delete a compliment (I want a trashcan)~~
 * ~~the ability to favorite the best compliments (clicking favorite adds an `angelo-parrot` next to the favorite button)~~
-* ~~ random nicolas cage gifs instead of cute cats~~
+* ~~random nicolas cage gifs instead of cute cats~~
 
 # Deliverables
 As a user I want...
