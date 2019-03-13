@@ -41,4 +41,5 @@ To use this backend run these commands:
 * `rails db:migrate`
 * `rails db:seed`
 * `rails s`
+
 Once you have the rails server running checkout `localhost:3000/compliments` (you can also look at `localhost:3000/rails/info/routes` on any rails app to see your available routes)
