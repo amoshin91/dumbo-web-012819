@@ -15,7 +15,7 @@
 * Use `fetch` to make a get request and add this new information to our webpage
 
 
-## Our App So far
+## Our App So Far
 As a user I now have...
 * ~~nicer styling on my app~~
 * ~~my list of nice compliments added~~
