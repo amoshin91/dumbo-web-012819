@@ -17,14 +17,16 @@
 
 ## Our App So Far
 As a user I now have...
-* ~~nicer styling on my app~~
-* ~~my list of nice compliments added~~
-* ~~the ability to add a "hug" to a compliment and see my hug count go up accordingly~~
-* ~~the ability to add my own compliments~~
+* nicer styling on my app
+* my list of nice compliments added
+* the ability to add a "hug" to a compliment and see my hug count go up accordingly
+* the ability to add my own compliments
+
 *REVEIW*
-* ~~the ability to delete a compliment (I want a trashcan)~~
-* ~~the ability to favorite the best compliments (clicking favorite adds an `angelo-parrot` next to the favorite button)~~
-* ~~random nicolas cage gifs instead of cute cats~~
+
+* the ability to delete a compliment (I want a trashcan)
+* the ability to favorite the best compliments (clicking favorite adds an `angelo-parrot` next to the favorite button)
+* random nicolas cage gifs instead of cute cats
 
 # Deliverables
 As a user I want...
