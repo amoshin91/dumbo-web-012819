@@ -13,16 +13,13 @@ const compliments = [
   "You’re even better than a unicorn, because you’re real.",
   "I would be really okay with you seeing me without makeup, that’s how much I like you.",
   "You have really good taste in friends (i.e. me).",
-  "You have a really contagious laugh. See, now I’m laughing and it's all your fault.",
+  "You have a really contagious laugh. See, now I’m laughing and it's all your fault."
 ];
 // helper method to get random number for photos
 function randomNumber(minNumber, maxNumber) {
   // given a min and max, return a number between them
   return Math.floor((Math.random() * (maxNumber - minNumber) + minNumber) / 10) * 10;
 }
-
-// we are finding our <em> tag & removing it
-document.querySelector('em').remove();
 
 const ulTag = document.querySelector('ul');
 
@@ -69,7 +66,7 @@ formTag.addEventListener('submit', function(event) {
   event.preventDefault()
 
   const compliment = event.target.compliment.value
-  // using that complimet make a new complimet li, add in our complimet
+  // using that compliment make a new compliment li, add in our compliment
   // attach that new li to our UL (in the top position)
   ulTag.innerHTML =
   `<li>
