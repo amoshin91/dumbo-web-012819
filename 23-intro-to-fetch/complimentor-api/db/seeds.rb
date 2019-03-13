@@ -3,6 +3,9 @@ Compliment.destroy_all
 
 # create new fresh compliments!
 Compliment.create([
+  { message: "I bet you make babies smile.", hug_count: 0, favorited: false },
+  { message: "Our time together is like a nap, it never lasts long enough.", hug_count: 0, favorited: false },
+  { message: "When you say, “I meant to do that,” I totally believe you.", hug_count: 0, favorited: false },
   { message: "Your eyebrows are on fleek.", hug_count: 0, favorited: false },
   { message: "You’re a great person to do a group project with.", hug_count: 0, favorited: false },
   { message: "You’re always on time to things, which is awesome because I’m not.", hug_count: 0, favorited: false },
