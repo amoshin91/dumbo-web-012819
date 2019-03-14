@@ -6,12 +6,13 @@ const generateRandomNumber = (minNumber, maxNumber) => {
 }
 
 const createComplimentHTML = (compliment) => {
+  // debugger
   // let angeloParrotTag = '';
   // if (!compliment.favorited) {
   //   angeloParrotTag = `<img src="https://media.giphy.com/media/fxKZAR0nAUhJCcvqP5/giphy.gif" class="angelo-parrot" />`;
   // }
   return `<li>
-    <div class="trash">🗑</div>
+    <div data-id="${compliment.id}" class="trash">🗑</div>
     <div class="favorite">⭐️</div>
     <img width="200" src="https://www.placecage.com/gif/${generateRandomNumber(400, 500)}/${generateRandomNumber(200, 250)}" />
     <h1>"${compliment.message}"</h1>
@@ -50,7 +51,10 @@ ulTag.addEventListener('click', (event) => {
       })
 
   } else if (event.target.classList.contains('trash')) {
-    event.target.parentElement.remove();
+    deleteCompliment(event.target.dataset.id)
+      .then(() => {
+        event.target.parentElement.remove();
+      })
   } else if (event.target.classList.contains('favorite')) {
     event.target.parentElement.innerHTML =
     `<img src="https://media.giphy.com/media/fxKZAR0nAUhJCcvqP5/giphy.gif" class="angelo-parrot" />` +
@@ -70,8 +74,37 @@ formTag.addEventListener('submit', function(event) {
   const compliment = event.target.compliment.value
   // using that compliment make a new compliment li, add in our compliment
   // attach that new li to our UL (in the top position)
-  ulTag.innerHTML = createComplimentHTML(compliment) + ulTag.innerHTML
+  createNewCompliment(compliment)
+    .then(parsedJSON => {
+      ulTag.innerHTML = createComplimentHTML(parsedJSON) + ulTag.innerHTML
+    })
 })
+
+
+const createNewCompliment = (compliment) => {
+  return fetch('http://localhost:3000/compliments', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify({
+      message: compliment,
+      hug_count: 0,
+      favorited: false
+    })
+  }).then(res => res.json())
+}
+
+const deleteCompliment = (id) => {
+  return fetch(`http://localhost:3000/compliments/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    }
+  })
+}
 
 // update my hug count and have it save to my database
 const updateComplimentHugCount = (id, hugCount) => {
