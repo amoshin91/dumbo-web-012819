@@ -1,4 +1,4 @@
-# Intro to fetch
+# fetch CRUD
 
 ## Learning Goals
 * Explain what a SPA is
@@ -7,7 +7,7 @@
 * Explain Optimistic vs Pessimistic Rendering
 
 *BONUS*
-* Refactor our code 
+* Refactor our code
 * Walk through breakpoints / debugger
 
 ## Our App So Far
