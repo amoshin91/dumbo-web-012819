@@ -28,8 +28,8 @@ As a user I now have...
 
 # Deliverables
 As a user I want to...
-* create new compliments and have them save to my database
 * update my hug count and have it save to my database
+* create new compliments and have them save to my database
 * delete a compliment and have it save to my database
 * favorite a compliment and have it save to the database
 
