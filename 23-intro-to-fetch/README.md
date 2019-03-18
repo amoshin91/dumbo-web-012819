@@ -6,6 +6,7 @@
   * Working with events ( ex. 'click', 'submit') + callbacks
 * DRY up creating our HTML template
   * Understand the difference between implicit and explicit return
+  * Replace `function() {}` with `() => {}`
 * Understand how we persist data on our web app.
 * Review the REST convention
 * Explain the purpose of `fetch`
