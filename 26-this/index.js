@@ -7,29 +7,29 @@
 // window.console.log('test')
 
 // Scenario 1: 'this' gets AUTOMATICALLY bound to the class/instance
-// class Dog {
-//   constructor() {
-//     // console.log("what 'this' is in the dog object", this)
-//   }
-//   static whatIsADog() {
-//     // console.log("what 'this' is in the dog class method", this)
-//     return 'a dog is a loving four legged animal';
-//   }
-// }
+class Dog {
+  constructor() {
+    // console.log("what 'this' is in the dog object", this)
+  }
+  static whatIsADog() {
+    // console.log("what 'this' is in the dog class method", this)
+    return 'a dog is a loving four legged animal';
+  }
+}
 
 // Scenario 2: Functions
 
-// function saySup() {
-//   console.log("what 'this' is in a normal function", this)
-//   return `sup ${this.name}`
-// }
-// saySup() => this? WINDOW
-//
-// let cat = {
-//   name: "Cuddles",
-//   speak: saySup
-// }
-// cat.speak() => this? CAT OBJ
+function saySup() {
+  console.log("what 'this' is in a normal function", this)
+  return `sup ${this.name}`
+}
+saySup() => this? WINDOW
+
+let cat = {
+  name: "Cuddles",
+  speak: saySup
+}
+cat.speak() => this? CAT OBJ
 
 
 // Scenario 3: Arrow Functions
@@ -41,17 +41,17 @@
 // }
 //
 
-// const saySup = () => {
-//   console.log("what 'this' is in an arrow function", this)
-//   return `sup`
-// }
-// saySup() => this? WINDOW
-//
-// let cat = {
-//   name: "Cuddles",
-//   speak: saySup
-// }
-// cat.speak() => this? WINDOW
+const saySup = () => {
+  console.log("what 'this' is in an arrow function", this)
+  return `sup`
+}
+saySup() => this? WINDOW
+
+let cat = {
+  name: "Cuddles",
+  speak: saySup
+}
+cat.speak() => this? WINDOW
 
 
 // Scenario 4: bind/call/apply
@@ -65,4 +65,7 @@ let cat = {
   speak: saySup
 }
 
-let ourBoundSaySup = saySup.bind(cat);
+let ourBoundSaySup = saySup.bind(window);
+
+saySup.call(window, 'kevinnnnnnn', arg2, arg3)
+saySup.apply(cat, ['kevinnnnnnn', arg2, arg3])
