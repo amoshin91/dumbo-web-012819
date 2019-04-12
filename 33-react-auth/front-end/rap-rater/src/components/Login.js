@@ -35,7 +35,7 @@ class Login extends React.Component {
           value={this.state.password}
           onChange={this.changeHandler}
         />
-        <button>Sign Up</button>
+        <button>Login</button>
       </form>
     );
   }
